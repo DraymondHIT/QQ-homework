@@ -3,15 +3,81 @@
 #### 介绍
 QQ作业下载工具
 
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 目录架构
+目录架构说明
+|-- test
+    |-- app.js
+    |-- app.json
+    |-- app.qss
+    |-- directoryList.md
+    |-- package-lock.json
+    |-- package.json
+    |-- project.config.json
+    |-- cloudfunctions
+    |-- miniprogram_npm
+    |   |-- @cloudbase
+    |   |   |-- extension-ci
+    |   |       |-- index.js
+    |   |       |-- index.js.map
+    |   |-- fast-xml-parser
+    |   |   |-- index.js
+    |   |   |-- index.js.map
+    |   |-- js-base64
+    |       |-- index.js
+    |       |-- index.js.map
+    |-- pages
+    |   |-- changepassword
+    |   |   |-- changepassword.js
+    |   |   |-- changepassword.json
+    |   |   |-- changepassword.qml
+    |   |   |-- changepassword.qss
+    |   |-- download1
+    |   |   |-- download.js
+    |   |   |-- download.json
+    |   |   |-- download.qml
+    |   |   |-- download.qss
+    |   |-- download2
+    |   |   |-- download.js
+    |   |   |-- download.json
+    |   |   |-- download.qml
+    |   |   |-- download.qss
+    |   |-- index
+    |   |   |-- index.js
+    |   |   |-- index.json
+    |   |   |-- index.qml
+    |   |   |-- index.qss
+    |   |-- login
+    |   |   |-- login.js
+    |   |   |-- login.json
+    |   |   |-- login.qml
+    |   |   |-- login.qss
+    |   |-- logs
+    |   |   |-- logs.js
+    |   |   |-- logs.json
+    |   |   |-- logs.qml
+    |   |   |-- logs.qss
+    |   |-- student
+    |   |   |-- student.js
+    |   |   |-- student.json
+    |   |   |-- student.qml
+    |   |   |-- student.qss
+    |   |-- teacher
+    |   |   |-- teacher.js
+    |   |   |-- teacher.json
+    |   |   |-- teacher.qml
+    |   |   |-- teacher.qss
+    |   |-- upload1
+    |   |   |-- upload.js
+    |   |   |-- upload.json
+    |   |   |-- upload.qml
+    |   |   |-- upload.qss
+    |   |-- upload2
+    |       |-- upload.js
+    |       |-- upload.json
+    |       |-- upload.qml
+    |       |-- upload.qss
+    |-- utils
+        |-- util.js
 
 #### 使用说明
 
