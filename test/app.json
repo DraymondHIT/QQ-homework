@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/student/student",
+    "pages/teacher/teacher",
+    "pages/changepassword/changepassword",
+    "pages/upload1/upload",
+    "pages/upload2/upload",
+    "pages/download1/download",
+    "pages/download2/download"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "QQ小程序",
+    "navigationBarTextStyle":"black"
+  }
+}
