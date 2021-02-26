@@ -37,32 +37,34 @@ Page({
                 qq.cloud.uploadFile({
                     filePath: tempFilePaths[0].path,
                     cloudPath:tempFilePaths[0].name,
+                }).then((res) => {
+                    console.log("上传成功",res.fileID)
+                    // this.setData({
+                    //     fileID:res.fileID
+                    // })
+                    
+                    file.add({
+                        data:{
+                            number:that.data.number,
+                            class:that.data.class,
+                            homeworkID:that.data.homeworkID,
+                            fileID:res.fileID
+                        },
                     }).then((res) => {
-                        console.log("上传成功",res.fileID)
-                        // this.setData({
-                        //     fileID:res.fileID
-                        // })
-                        
-                        file.add({
-                            data:{
-                                number:that.data.number,
-                                class:that.data.class,
-                                homeworkID:that.data.homeworkID,
-                                fileID:res.fileID
-                            },
-                        }).then((res) => {
-                            console.log(res.data)
-                        });
-                        qq.showModal({
-                            title: '上传成功',
-                            content: '作业已成功上传！',
-                            confirmColor: '#0bc183',
-                            confirmText: '知道了',
-                            showCancel: false
-                        })
-                        qq.navigateBack()
+                        console.log(res.data)
+                    });
+                    qq.showToast({
+                        title: "上传成功", 
+                        icon: "success",
+                        duration: 1500, 
+                        mask: false
                     })
+                })
             }
         })
+    },
+
+    back: function(){
+        qq.navigateBack()
     }
 })

@@ -1,0 +1,9 @@
+.boxx
+{
+    margin-top:5vh;
+    width: 70%;
+}
+.box{
+    width: 70%;
+    margin-top:10vh; 
+}

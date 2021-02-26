@@ -26,7 +26,11 @@
 	"qqappid": "1111166200",
 	"projectname": "test",
 	"cloudfunctionRoot": "cloudfunctions/",
-	"scripts": {},
+	"scripts": {
+		"beforeCompile": "",
+		"beforePreview": "",
+		"beforeUpload": ""
+	},
 	"condition": {
 		"search": {
 			"current": -1,

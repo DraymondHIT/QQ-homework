@@ -9,9 +9,9 @@ App({
     // 登录
     qq.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        //  发送 res.code 到后台换取 openId, sessionKey, unionId
       }
-    })
+    }) 
     // 获取用户信息
     qq.getSetting({
       success: res => {

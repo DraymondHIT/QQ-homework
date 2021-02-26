@@ -1,8 +1,10 @@
 <view class="container">
     <form bindsubmit="formSubmit" bindreset="formReset">
-    <view class="number">
+    <view class="name">
         <label>帐号：</label>
         <input name="number" placeholder="请输入帐号！" />
+    </view>
+    <view class="box">
     </view>
     <view class="name">
         <label>密码：</label>
@@ -20,10 +22,9 @@
         </label>
         </radio-group>
     </view>
-    <view class="tip">{{tip}}</view>
     <view class="submit">
-        <button style="width:60%" form-Type="submit">提交</button>
-        <button style="width:60%" form-Type="reset">重置</button>
+        <button class="button" style="width:60%" form-Type="submit">提交</button>
+        <button class="button" style="width:60%" form-Type="reset">重置</button>
     </view>
     </form>
 </view>

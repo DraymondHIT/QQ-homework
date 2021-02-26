@@ -9,12 +9,15 @@
     "pages/upload1/upload",
     "pages/upload2/upload",
     "pages/download1/download",
-    "pages/download2/download"
+    "pages/download2/download",
+    "pages/search/search"
   ],
   "window":{
+    "navigationStyle":"custom",
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "QQ小程序",
     "navigationBarTextStyle":"black"
   }
 }
+ 

@@ -28,13 +28,21 @@ Page({
             number: that.data.number,
             homeworkID: that.data.homeworkID
         }).get().then((res) => {
+            if(res.data.length == 0){
+                qq.showToast({
+                    title: "下载失败", 
+                    icon: "none",
+                    duration: 1500, 
+                    mask: false
+                })
+            }
             for(i=0;i<res.data.length;i++){
                 qq.cloud.downloadFile({
                     fileID:res.data[i].fileID
                 })
                 .then((res)=>{
                     console.log(res.tempFilePath)
-                    const savePath = qq.env.USER_DATA_PATH + '/'  + that.data.homeworkID + '.pdf.jpg'
+                    const savePath = qq.env.USER_DATA_PATH + '/' + that.data.homeworkID + '.pdf.jpg'
                     qq.getFileSystemManager().saveFile({
                         tempFilePath: res.tempFilePath,
                         filePath: savePath,
@@ -42,24 +50,32 @@ Page({
                             console.log('save ->', res)
                             qq.saveImageToPhotosAlbum({
                                 filePath: savePath,
-                                success: (res) => {
-                                    qq.showModal({
-                                        title: '文件已保存到手机相册',
-                                        content: '可在相册中查看文件详细位置，找到文件后将保存的文件后缀名改为[.pdf]即可',
-                                        confirmColor: '#0bc183',
-                                        confirmText: '知道了',
-                                        showCancel: false
+                                success(){
+                                    qq.showToast({
+                                        title: "下载成功", 
+                                        icon: "success",
+                                        duration: 1500, 
+                                        mask: false
                                     })
-                                    qq.navigateBack()
                                 }
                             })
                         },
                         fail(){
                             console.log("下载失败")
+                            qq.showToast({
+                                title: "下载失败", 
+                                icon: "none",
+                                duration: 3000, 
+                                mask: false
+                            })
                         }
                     })
                 })  
             }
         })
+    },
+
+    back: function(){
+        qq.navigateBack()
     }
 })

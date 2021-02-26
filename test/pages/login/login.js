@@ -7,7 +7,6 @@ const teacher = db.collection('teacher')
 
 Page({
     data:{
-        tip:'',
         number:'',
         password:'',
         group:''
@@ -32,14 +31,19 @@ Page({
                 if(res.data.length==0||res.data[0].password!=e.detail.value.password){
                     console.log('登陆失败')
                     this.setData({
-                        tip:'提示：帐号或密码错误！',
                         number:'',
                         password:''
+                    })
+                    qq.showModal({
+                        title: '登录失败',
+                        content: '账号或密码错误！',
+                        confirmColor: '#0bc183',
+                        confirmText: '知道了',
+                        showCancel: false
                     })
                 }else{
                     console.log('登陆成功')
                     this.setData({
-                        tip:'',
                         number:e.detail.value.number,
                         password:e.detail.value.password
                     })
@@ -58,14 +62,19 @@ Page({
                 if(res.data.length==0||res.data[0].password!=e.detail.value.password){
                     console.log('登陆失败')
                     this.setData({
-                        tip:'提示：帐号或密码错误！',
                         number:'',
                         password:''
+                    })
+                    qq.showModal({
+                        title: '登录失败',
+                        content: '账号或密码错误！',
+                        confirmColor: '#0bc183',
+                        confirmText: '知道了',
+                        showCancel: false
                     })
                 }else{
                     console.log('登陆成功')
                     this.setData({
-                        tip:'',
                         number:e.detail.value.number,
                         password:e.detail.value.password   
                     })

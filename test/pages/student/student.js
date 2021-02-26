@@ -26,6 +26,12 @@ Page({
         })
     },
 
+    search: function() {
+        qq.navigateTo({
+            url:'../search/search'
+        })
+    },
+
     changePassword:function(){
         qq.navigateTo({
             url:'../changepassword/changepassword?number='+this.data.number+'&group='+'stu'+'&name='+this.data.name+'&class='+this.data.class

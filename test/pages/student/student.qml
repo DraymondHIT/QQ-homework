@@ -1,5 +1,6 @@
 <view class="container">
-    <button bindtap="upLoad">上传</button>
-    <button bindtap="downLoad">下载</button>
-    <button bindtap="changePassword">修改密码</button>
-</view>
+    <button class="boxx" bindtap="upLoad">作业上传</button>
+    <button class="box" bindtap="downLoad">作业下载</button>
+    <button class="box" bindtap="search">在线资源</button>
+    <button class="box" bindtap="changePassword">修改密码</button>
+</view> 
