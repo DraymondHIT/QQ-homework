@@ -10,7 +10,7 @@
     </view>
     <view class="submit">
         <button style="width:60%" form-Type="submit">下载</button>
-        <button style="width:60%" bindtap="back">返回</button>
+        <!-- <button style="width:60%" bindtap="back">返回</button> -->
     </view> 
     </form>
 </view>

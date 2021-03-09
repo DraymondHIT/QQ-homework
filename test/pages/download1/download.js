@@ -75,7 +75,7 @@ Page({
         })
     },
 
-    back: function(){
-        qq.navigateBack()
-    }
+    // back: function(){
+    //     qq.navigateBack()
+    // }
 })

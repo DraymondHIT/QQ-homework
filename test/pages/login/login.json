@@ -1,4 +1,4 @@
-{
-  "navigationBarTitleText": "用户信息验证",
-  "usingComponents": {}
-}
+ {
+    "navigationBarTitleText": "登录界面",
+    "usingComponents": {}
+  }

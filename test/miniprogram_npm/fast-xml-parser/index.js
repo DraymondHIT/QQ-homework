@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {} }; __MODS__[
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = { exports: {} }; __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); if(typeof m.exports === "object") { Object.keys(m.exports).forEach(function(k) { __MODS__[modId].m.exports[k] = m.exports[k]; }); if(m.exports.__esModule) Object.defineProperty(__MODS__[modId].m.exports, "__esModule", { value: true }); } else { __MODS__[modId].m.exports = m.exports; } } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1611718557402, function(require, module, exports) {
+__DEFINE__(1614041951500, function(require, module, exports) {
 'use strict';
 
 const nodeToJson = require('./node2json');
@@ -72,8 +72,8 @@ function print(xmlNode, indentation){
     console.log(indentation + "},")
   }
 }
-}, function(modId) {var map = {"./node2json":1611718557403,"./xmlstr2xmlnode":1611718557405,"./util":1611718557404,"./validator":1611718557407,"../src/nimndata":1611718557408,"./node2json_str":1611718557409,"./json2xml":1611718557410}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611718557403, function(require, module, exports) {
+}, function(modId) {var map = {"./node2json":1614041951501,"./xmlstr2xmlnode":1614041951503,"./util":1614041951502,"./validator":1614041951505,"../src/nimndata":1614041951506,"./node2json_str":1614041951507,"./json2xml":1614041951508}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1614041951501, function(require, module, exports) {
 'use strict';
 
 const util = require('./util');
@@ -129,8 +129,8 @@ const convertToJson = function(node, options) {
 
 exports.convertToJson = convertToJson;
 
-}, function(modId) { var map = {"./util":1611718557404}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611718557404, function(require, module, exports) {
+}, function(modId) { var map = {"./util":1614041951502}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1614041951502, function(require, module, exports) {
 'use strict';
 
 const nameStartChar = ':A-Za-z_\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD';
@@ -220,7 +220,7 @@ exports.getAllMatches = getAllMatches;
 exports.nameRegexp = nameRegexp;
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611718557405, function(require, module, exports) {
+__DEFINE__(1614041951503, function(require, module, exports) {
 'use strict';
 
 const util = require('./util');
@@ -563,8 +563,8 @@ function findClosingIndex(xmlData, str, i, errMsg){
 
 exports.getTraversalObj = getTraversalObj;
 
-}, function(modId) { var map = {"./util":1611718557404,"./xmlNode":1611718557406}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611718557406, function(require, module, exports) {
+}, function(modId) { var map = {"./util":1614041951502,"./xmlNode":1614041951504}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1614041951504, function(require, module, exports) {
 'use strict';
 
 module.exports = function(tagname, parent, val) {
@@ -584,7 +584,7 @@ module.exports = function(tagname, parent, val) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611718557407, function(require, module, exports) {
+__DEFINE__(1614041951505, function(require, module, exports) {
 'use strict';
 
 const util = require('./util');
@@ -982,8 +982,8 @@ function getPositionFromMatch(attrStr, match) {
   return attrStr.indexOf(match) + match.length;
 }
 
-}, function(modId) { var map = {"./util":1611718557404}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611718557408, function(require, module, exports) {
+}, function(modId) { var map = {"./util":1614041951502}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1614041951506, function(require, module, exports) {
 'use strict';
 const char = function(a) {
   return String.fromCharCode(a);
@@ -1129,8 +1129,8 @@ const convert2nimn = function(node, e_schema, options) {
 
 exports.convert2nimn = convert2nimn;
 
-}, function(modId) { var map = {"./xmlstr2xmlnode":1611718557405,"./util":1611718557404}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611718557409, function(require, module, exports) {
+}, function(modId) { var map = {"./xmlstr2xmlnode":1614041951503,"./util":1614041951502}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1614041951507, function(require, module, exports) {
 'use strict';
 
 const util = require('./util');
@@ -1195,8 +1195,8 @@ function indentate(options, level) {
 
 exports.convertToJsonString = convertToJsonString;
 
-}, function(modId) { var map = {"./util":1611718557404,"./xmlstr2xmlnode":1611718557405}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1611718557410, function(require, module, exports) {
+}, function(modId) { var map = {"./util":1614041951502,"./xmlstr2xmlnode":1614041951503}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1614041951508, function(require, module, exports) {
 'use strict';
 //parse Empty Node as self closing node
 const buildOptions = require('./util').buildOptions;
@@ -1466,7 +1466,7 @@ function isCDATA(name) {
 
 module.exports = Parser;
 
-}, function(modId) { var map = {"./util":1611718557404}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1611718557402);
+}, function(modId) { var map = {"./util":1614041951502}; return __REQUIRE__(map[modId], modId); })
+return __REQUIRE__(1614041951500);
 })()
 //# sourceMappingURL=index.js.map

@@ -1,11 +1,8 @@
-<view class="top">
-  <view class="topsearch">
-    <view class="frame">
-      <input value="{{shoopingtext}}" bindinput="shoppinginput"></input>
-    </view>
-    <text bindtap="search">搜索</text>
+<view class="contentView">
+  <view class="textarea_bg">
+    <textarea value="{{shoopingtext}}" bindinput="shoppinginput"></textarea>
   </view>
-</view>
+</view> 
 <view class="history" wx:if="{{history}}">
   <view class="history_title">
     <text>历史搜索</text>
@@ -22,8 +19,13 @@
 </view>
 <view class='swiper_con' wx:if="{{shoppinglist}}">
   <view class='swiper_con_view' wx:for="{{shoopingarray}}" wx:key="id" wx:if='{{item.status=="1"?true:false}}'>
-    <view style="width:90%;margin:5%;">
-      <text style="font-size:24rpx" bindtap="downLoad" id="{{item.id}}" data-hi="{{item.fileID}}">{{item.title}}</text>
+    <view style="width:90%;margin:5%">
+      <text style="font-size:35rpx" bindtap="downLoad" id="{{item.id}}" data-hi="{{item.fileID}}">{{item.title}}</text>
     </view>
   </view>
 </view>
+<view class="submit">
+ <view style="position:fixed;bottom:5%;width:50%">
+    <button bindtap="search">搜索</button>
+    </view>
+  </view>

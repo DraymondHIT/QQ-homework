@@ -1,13 +1,4 @@
-const extCI = require('@cloudbase/extension-ci');
-
 Page({
-  onLoad:function(){
-      qq.cloud.init({
-          env: 'cloudbase-5gxq5ehyf8eca834'
-      })
-      qq.cloud.registerExtension(extCI);
-  },
-
   //清除历史记录
   cleanhistory: function(e) {
     this.setData({
@@ -24,7 +15,9 @@ Page({
     var sss = true;
     if (searchtext != "") {
       //将搜索框的值赋给历史数组
-      this.data.historyArray.push(searchtext);
+      if (!this.data.historyArray.includes(searchtext)) {
+        this.data.historyArray.push(searchtext);
+      }
       //模糊查询 循环查询数组中的title字段
       for (var index in this.data.shoopingarray) {
         var num = this.data.shoopingarray[index].title.indexOf(searchtext);
@@ -115,6 +108,7 @@ Page({
     if (e.detail.value == "") {
       this.setData({
         history: true, //显示历史记录
+        noneview: false,
         shoppinglist: false //隐藏商品列表
       });
       //所有商品列表的状态改为0
@@ -137,8 +131,8 @@ Page({
   },
 
   downLoad: function(param) {
-      console.log("打开文件id ",param.target.id)
-      console.log("打开文件fileID ",param.target.dataset.hi)
+      console.log("打开文档ID：", param.target.id)
+      console.log("打开文档url: ", param.target.dataset.hi)
       var _fileID = param.target.dataset.hi
       qq.cloud.downloadFile({
           fileID: _fileID

@@ -2,26 +2,21 @@ page{
   background-color: white;
 }
  
-.top {
-  margin-top: 70px;
+.contentView{
   width: 100%;
-  background-color: #f7f7f7;
-}
+  margin-top: 10vh;
  
-.topsearch {
-  width: 100%;
-  margin-left: 2%;
-  display: flex;
-  padding: 2% 0;
-  align-items: center;
 }
- 
-.frame {
-  background-color: white;
-  width: 75%;
-  border-radius: 20rpx;
-  padding: 0 3%;
+.textarea_bg{
+  padding: 0 25rpx;
+  background-color: #fff; 
 }
+textarea{
+  width: 700rpx;
+  padding: 25rpx 0;
+  margin-top:0;
+  height:100rpx;
+} 
  
 .frame>input {
   font-size: 24rpx;
@@ -35,7 +30,6 @@ page{
 }
  
 .history {
-  background-color: white;
   padding: 4%;
 }
  
@@ -65,7 +59,7 @@ page{
   padding: 1% 3%;
   margin: 2%;
   border-radius: 40rpx;
-  font-size: 50rpx;
+  font-size: 40rpx;
 }
  
 .history_text>text:first-child{
@@ -73,11 +67,11 @@ page{
 }
  
 .none{
-  margin-top: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 10%;
 }
  
 .swiper_con {
@@ -87,4 +81,7 @@ page{
  
 .swiper_con_view {
   
+}
+.submit {
+    margin-left:25%;
 }
